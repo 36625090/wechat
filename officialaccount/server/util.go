@@ -10,8 +10,8 @@ var plainContentType = []string{"text/plain; charset=utf-8"}
 
 func writeContextType(w http.ResponseWriter, value []string) {
 	header := w.Header()
-	if val := header["Content-Type"]; len(val) == 0 {
-		header["Content-Type"] = value
+	if val := header["Message-Type"]; len(val) == 0 {
+		header["Message-Type"] = value
 	}
 }
 

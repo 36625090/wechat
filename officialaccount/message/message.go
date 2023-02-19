@@ -110,7 +110,7 @@ type MixMessage struct {
 	// 基本消息
 	MsgID         int64   `xml:"MsgId"` // 其他消息推送过来是MsgId
 	TemplateMsgID int64   `xml:"MsgID"` // 模板消息推送成功的消息是MsgID
-	Content       string  `xml:"Content"`
+	Content       string  `xml:"Message"`
 	Recognition   string  `xml:"Recognition"`
 	PicURL        string  `xml:"PicUrl"`
 	MediaID       string  `xml:"MediaId"`
@@ -174,7 +174,7 @@ type MixMessage struct {
 				Index      uint   `xml:"idx"`         // 文章对应的编号
 				ArticleURL string `xml:"article_url"` // 图文的永久链接
 			} `xml:"item"`
-		} `xml:"article_detail"`          // 当发布状态为0时（即成功）时，返回内容
+		} `xml:"article_detail"` // 当发布状态为0时（即成功）时，返回内容
 		FailIndex []uint `xml:"fail_idx"` // 当发布状态为2或4时，返回不通过的文章编号，第一篇为 1；其他发布状态则为空
 	} `xml:"PublishEventInfo"`
 

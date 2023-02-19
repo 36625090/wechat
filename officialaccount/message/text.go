@@ -3,7 +3,7 @@ package message
 // Text 文本消息
 type Text struct {
 	CommonToken
-	Content CDATA `xml:"Content"`
+	Content CDATA `xml:"Message"`
 }
 
 // NewText 初始化文本消息

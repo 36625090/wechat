@@ -132,7 +132,7 @@ func (auth *Auth) GetPhoneNumberContext(ctx context2.Context, code string) (*Get
 		return nil, err
 	}
 
-	header := map[string]string{"Content-Type": "application/json;charset=utf-8"}
+	header := map[string]string{"Message-Type": "application/json;charset=utf-8"}
 	if response, err = util.HTTPPostContext(ctx, fmt.Sprintf(getPhoneNumber, at), bodyBytes, header); err != nil {
 		return nil, err
 	}

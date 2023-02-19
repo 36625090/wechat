@@ -44,7 +44,7 @@ func (u *URLLink) Query(urlLink string) (*ULQueryResult, error) {
 		return nil, err
 	}
 	var resp ULQueryResult
-	err = util.DecodeWithError(response, &resp, "URLLink.Query")
+	err = util.DecodeWithError(response, &resp, "URLLink.Prompt")
 	if err != nil {
 		return nil, err
 	}

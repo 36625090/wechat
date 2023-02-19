@@ -38,7 +38,7 @@ type MiniProgramMixMessage struct {
 	MsgID int64 `xml:"MsgId"`
 
 	// 文本消息
-	Content string `xml:"Content"`
+	Content string `xml:"Message"`
 
 	// 图片消息
 	PicURL  string `xml:"PicUrl"`
